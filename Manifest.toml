@@ -2,7 +2,7 @@
 
 julia_version = "1.11.6"
 manifest_format = "2.0"
-project_hash = "2abc030a0b6f0c6cb31f78f7fb0a6794b93660b7"
+project_hash = "75554d5b4973fba41a5d14d141b0209e3c055536"
 
 [[deps.ADTypes]]
 git-tree-sha1 = "27cecae79e5cc9935255f90c53bb831cc3c870d7"
@@ -927,14 +927,11 @@ deps = ["Accessors", "ArrayInterface", "DocStringExtensions", "LinearAlgebra", "
 git-tree-sha1 = "c1053ba68ede9e4005fc925dd4e8723fcd96eef8"
 uuid = "c0aeaf25-5076-4817-a8d5-81caf7dfa961"
 version = "1.9.0"
+weakdeps = ["SparseArrays", "StaticArraysCore"]
 
     [deps.SciMLOperators.extensions]
     SciMLOperatorsSparseArraysExt = "SparseArrays"
     SciMLOperatorsStaticArraysCoreExt = "StaticArraysCore"
-
-    [deps.SciMLOperators.weakdeps]
-    SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
-    StaticArraysCore = "1e83bf80-4336-4d27-bf5d-d5a4f845583c"
 
 [[deps.SciMLPublic]]
 git-tree-sha1 = "ed647f161e8b3f2973f24979ec074e8d084f1bee"
@@ -978,6 +975,11 @@ git-tree-sha1 = "64d974c2e6fdf07f8155b5b2ca2ffa9069b608d9"
 uuid = "a2af1166-a08f-5f64-846c-94a0d3cef48c"
 version = "1.2.2"
 
+[[deps.SparseArrays]]
+deps = ["Libdl", "LinearAlgebra", "Random", "Serialization", "SuiteSparse_jll"]
+uuid = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
+version = "1.11.0"
+
 [[deps.SpecialFunctions]]
 deps = ["IrrationalConstants", "LogExpFunctions", "OpenLibm_jll", "OpenSpecFun_jll"]
 git-tree-sha1 = "f2685b435df2613e25fc10ad8c26dddb8640f547"
@@ -1020,12 +1022,10 @@ deps = ["LinearAlgebra"]
 git-tree-sha1 = "ae3bb1eb3bba077cd276bc5cfc337cc65c3075c0"
 uuid = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
 version = "1.11.1"
+weakdeps = ["SparseArrays"]
 
     [deps.Statistics.extensions]
     SparseArraysExt = ["SparseArrays"]
-
-    [deps.Statistics.weakdeps]
-    SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
 
 [[deps.StrideArraysCore]]
 deps = ["ArrayInterface", "CloseOpenIntervals", "IfElse", "LayoutPointers", "LinearAlgebra", "ManualMemory", "SIMDTypes", "Static", "StaticArrayInterface", "ThreadingUtilities"]
@@ -1042,6 +1042,11 @@ version = "0.4.1"
 [[deps.StyledStrings]]
 uuid = "f489334b-da3d-4c2e-b8f0-e476e12c162b"
 version = "1.11.0"
+
+[[deps.SuiteSparse_jll]]
+deps = ["Artifacts", "Libdl", "libblastrampoline_jll"]
+uuid = "bea87d4a-7f5b-5778-9afe-8cc45184846c"
+version = "7.7.0+0"
 
 [[deps.SymbolicIndexingInterface]]
 deps = ["Accessors", "ArrayInterface", "RuntimeGeneratedFunctions", "StaticArraysCore"]
